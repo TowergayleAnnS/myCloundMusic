@@ -1,0 +1,74 @@
+<view class="musicList_container">
+   <van-collapse style="width:100vw;height:100vh;" value="{{ activeNames }}" bind:change="onChange">
+  <van-collapse-item title="创建的歌单" name="1">
+    <view class="addMusicList">
+      <!-- <view>新建歌单</view> -->
+      <view class="showBox">
+        <view>
+          <van-cell title="创建歌单" custom-style="display:flex; justify-content: space-between;" is-link bindtap="showPopup" />
+        </view>
+      </view>
+      <!-- <view class="createBtn"> <image src="../../images/创建1.png"></image></view> -->
+      <van-popup 
+      show="{{ show }}" 
+      bindtap="onClose"
+      custom-style="height: 40vh;width: 95vw;padding:3vh 10vw;border-radius: 18rpx;"
+      >
+        <view  class="createBox">
+          <view style="font-size:40rpx;font-weight:500;margin:15rpx 0;" >新建歌单</view>
+          <input class="nameInput" catchtap="songsName" bindinput="getName" placeholder="请输入歌单标题"></input>
+          
+          <view class="priveSelect">
+            <view>
+              <van-checkbox value="{{ checked }}" bindinput="selectChange" catchtap>设置为隐私歌单</van-checkbox>  
+            </view> 
+            <view>0/40</view>
+
+          </view>
+          <view class="outsideH">
+            <view class="handleBtnGroup">
+              <button>取消</button>
+              <button bindtap="commitAddEvent" >提交</button>
+          </view>
+          
+          </view>
+          
+        </view>
+      
+      </van-popup>
+    </view>
+    <view class="mylist">
+      <view class="mylist_item" 
+      wx:for="{{mycreatedList}}" 
+      data-item="{{item}}" 
+      wx:key="index"
+      bindtap="gotoDetail"
+      >
+        <view class="mylist_left">
+          <image src="{{item.coverImgUrl}}"></image>
+        </view>
+        <view class="mylist_right">
+          <text>{{item.name}}</text>
+          <text>{{item.trackCount}}首</text>
+        </view>
+      </view>
+    </view>
+    </van-collapse-item>
+      <van-collapse-item title="收藏的歌单" name="2">
+        <view class="mylist">
+      <view class="mylist_item" wx:for="{{myclloction}}" wx:key="index">
+        <view class="mylist_left">
+          <image src="{{item.coverImgUrl}}"></image>
+        </view>
+        <view class="mylist_right">
+          <text>{{item.name}}</text>
+          <text>{{item.trackCount}}首</text>
+        </view>
+      </view>
+    </view>
+      </van-collapse-item>
+    </van-collapse>
+  
+ 
+</view>
+<cdmechine></cdmechine>

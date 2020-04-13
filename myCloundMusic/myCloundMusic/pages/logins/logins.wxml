@@ -1,0 +1,17 @@
+<!--pages/login/login.wxml-->
+<view class="loginsPage">
+  <view class="it_group">
+   <view class="input_box">
+      <view  class="input_grop">
+        <label class="lables">手机号:</label>
+      <input bindinput="phoneInput" selection-start="3" placeholder-style="color:#000000" class="phone" placeholder="手机号"></input>
+      </view>
+      <view   class="input_grop">
+         <label class="lables">密码:</label>
+      <input bindinput="passwInput"  placeholder-style="color:#000000" class="password" placeholder="密码"></input>
+      </view>
+      
+   </view>
+   <button bindtap="loginClick" class="go_tologin">登录</button>
+  </view>
+</view>

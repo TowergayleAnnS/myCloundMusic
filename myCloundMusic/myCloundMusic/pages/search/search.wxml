@@ -1,0 +1,28 @@
+
+<view>
+  <van-search
+  value="{{ value }}"
+  placeholder="请输入搜索关键词"
+  use-action-slot
+  bind:change="onChange"
+ >
+  <view slot="action" bind:tap="onClick" >搜索</view>
+  </van-search>
+
+ <view class="search_box" wx:if="{{value&&value!=''}}">
+  <view 
+  wx:for="{{searchMusic}}" 
+  wx:key="index" 
+  class="search_item"
+  bindtap="playResultMusic"
+  data-musicitems="{{item}}"
+  >
+      <text class="search_text" >{{item.name}}</text>--
+      <text class="search_singers">{{item.artists[0].name}}</text>
+  
+  </view>
+ </view>
+  <hotsearch wx:else  hotarr="{{hotWords}}"></hotsearch>
+
+</view>
+<cdmechine></cdmechine>

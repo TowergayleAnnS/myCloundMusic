@@ -1,0 +1,15 @@
+/* components/hotsearch/hotsearch.wxss */
+.hotSearch{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 40rpx;
+}
+.hotwords{
+  margin-right: 20rpx;
+  margin-top: 20rpx;
+
+  color: grey;
+  height: 60rpx;
+  line-height: 60rpx;
+  background-color: lavender;
+}

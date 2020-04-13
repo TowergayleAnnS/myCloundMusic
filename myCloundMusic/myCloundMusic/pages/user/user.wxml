@@ -1,0 +1,29 @@
+
+<view class="userContain">
+  <login wx:if="{{isLogindata==data}}"></login>
+  <logined class="logined-contains" wx:else>
+    <view class="backGround-box">
+      <view class="bg_imgs">
+        <image class="bgimg" src="{{isLogindata.backgroundUrl}}"></image>
+      </view>
+      <view class="avatars">
+          <image class="avatar-img" src="{{isLogindata.avatarUrl}}"></image>
+          <text>{{isLogindata.nickname}}</text>
+          <view>
+            <text>关注:{{isLogindata.follows}}</text>
+            <text>粉丝:{{isLogindata.followeds}}</text>
+          </view>
+      </view>
+    </view>
+    <view class="white-block">
+        <view class="tittle_block">
+          <view>主页</view>
+          <view>动态</view>
+        </view>
+    </view>
+    
+  
+  </logined>
+</view>
+
+

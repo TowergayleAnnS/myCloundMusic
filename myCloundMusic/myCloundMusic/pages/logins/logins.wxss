@@ -1,0 +1,54 @@
+/* pages/login/login.wxss */
+.loginsPage{
+  position: relative;
+  height: 100vh !important;
+  width: 100vw;
+  color: white;
+  background-color: rgb(223,45,35)
+}
+.input_box{
+  height: 300rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.it_group{
+  position: absolute;
+ 
+ 
+  display: flex;
+  top: 300rpx;
+  left: 10vw;
+  flex-direction: column;
+  justify-content:center;
+  align-content: center; 
+ 
+}
+.phone,.password{
+  padding-left: 2em;
+  margin-top: 20rpx;
+ 
+  border: 3rpx solid white;
+  color:black!important;
+  /* background-color: white; */
+  height: 100rpx;
+}
+.lables{
+  width: 150rpx;
+}
+.input_grop{
+  /* background-color: white; */
+  line-height: 100rpx;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.input_grop>label{
+  line-height: 100rpx;
+}
+.go_tologin{
+  margin-top: 50px;
+  width: 80vw;
+  min-width: 80vw;
+}

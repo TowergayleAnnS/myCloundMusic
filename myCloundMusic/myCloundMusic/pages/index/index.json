@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "推荐",
+  "usingComponents": {
+    "cdmechine":"../../components/cdmechine/cdmechine"
+  }
+}

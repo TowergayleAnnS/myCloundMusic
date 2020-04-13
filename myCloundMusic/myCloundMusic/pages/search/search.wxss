@@ -1,0 +1,21 @@
+/* pages/search/search.wxss */
+.search_box{
+  width: 100vw;
+   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.search_text{
+  font-size: 25rpx;
+  width: 40vw;
+  
+}
+.search_item{
+  display: flex;
+  border-bottom: 3rpx solid lightgrey;
+}
+.search_singers{
+  font-size: 25rpx;
+  width: 40vw;
+}

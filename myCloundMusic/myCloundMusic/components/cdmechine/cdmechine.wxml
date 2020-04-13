@@ -1,0 +1,13 @@
+<!--components/cdmechine/cdmechine.wxml-->
+<view  class="cdMachine_box {{isPause?' paused':''}}" bindtap="goToPlayPage"  >
+<!-- isplayStatus -->
+  <!-- <image src="../../locatImage/beauty.jpg"></image> -->
+  <image src="{{musicInfo.pic?musicInfo.pic:'/images/cd.png'}}"></image>
+  <!-- <text>{{item}}</text> -->
+</view>
+<!-- <view wx:else class="goRotate" bindtap="goToPlayPage"  >
+  
+    <image src="../../locatImage/beauty.jpg"></image> 
+    <image src="{{cdData.index.album.blurPicUrl}}"></image>
+    <text>{{item}}</text>
+</view> -->

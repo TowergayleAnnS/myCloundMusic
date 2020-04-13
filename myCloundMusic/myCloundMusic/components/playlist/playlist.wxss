@@ -1,0 +1,20 @@
+/* components/playlist/playlist.wxss */
+.play_list_items{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20rpx 0rpx;
+  /* background: url() */
+}
+.play_list_items>text{
+  width: 20vw;
+  text-align: center;
+}
+.palylist-middle-part{
+  width: 60vw;
+}
+.video_btgrop{
+  width: 20vw;
+  display: flex;
+  justify-content: space-between;
+}

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "歌单",
+  "usingComponents": {
+    "cdmechine":"../../components/cdmechine/cdmechine"
+  }
+}

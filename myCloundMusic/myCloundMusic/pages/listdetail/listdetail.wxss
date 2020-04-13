@@ -1,0 +1,242 @@
+/* pages/listdetail/listdetail.wxss */
+.listDetailpage{
+  height: 100vh;
+  width: 100vw;
+}
+.li_detail_header{
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10rpx 25rpx;
+  height: 100rpx;
+  
+  /* background-color: darkblue; */
+}
+.pageToppart{
+  /* background-color: rgb(73,64,57); */
+  height: 50vh;
+  /* opacity: 0.1; */
+  
+
+
+}
+.bgUrl{
+  width: 100vw;
+  height: 50vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  filter:blur(20px);
+  z-index: -1;
+}
+
+.bgUrl>image{
+  width: 100vw;
+  height: 50vh;
+}
+.musicMenu{
+  color: white;
+  font-size: 35rpx;
+}
+.editSuggest{
+  color: gray;
+   font-size: 20rpx;
+}
+.pageDownpart{
+  position: relative;
+  top: -50rpx;
+  left: 0;
+  height: 50vh;
+  background-color:rgb(206,204,198);
+  border-top-left-radius: 40rpx;
+  border-top-right-radius: 40rpx;
+  
+}
+.down_insider{
+  position: relative;
+  top: 0rpx;
+  left: 0;
+  height: 50vh;
+  
+  background-color: white;
+  border-top-left-radius: 40rpx;
+  border-top-right-radius: 40rpx;
+}
+.header_t{
+  display: flex;
+  flex-direction: column;
+}
+.menuMessage_box{
+  /* padding: 10rpx 25rpx; */
+  display: flex;
+  justify-content: space-around;
+  width: 100vw;
+}
+.menu_image>image{
+  height: 250rpx;
+  width: 250rpx;
+}
+.munu_text_descrip{
+  height: 250rpx;
+  width: calc(100vw - 330rpx );
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.desr_title{
+  color: white;
+}
+.little_logo{
+  height: 60rpx;
+  width: 60rpx;
+  border-radius: 50%;
+}
+.logo_title_arrow{
+  width: 250rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  font-size: 28rpx;
+}
+.words_arrow{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.words_arrow>view{
+  font-size: 25rpx;
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+.function_box{
+  padding: 40rpx 0;
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.fun_box_item{
+  color: white;
+  font-size: 25rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.fun_box_item>image{
+  height: 60rpx;
+  width: 60rpx;
+}
+.vips_box{
+  height: 120rpx;
+  display: flex;
+  justify-content: space-between;
+  font-size: 25rpx;
+  align-items: center;
+  padding: 0rpx 25rpx;
+}
+.vip_box_left{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.vip_box_right{
+  width: 160rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.vip_images{
+  margin-right: 35rpx;
+}
+.vip_images>image{
+  height: 40rpx;
+  width: 40rpx;
+}
+
+
+/* //白框 */
+.paly_boxes{
+  /* width: 100vw; */
+  padding: 10rpx 10rpx 10rpx 20rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 3rpx solid lightgray;
+}
+.paly_left{
+  /* width: 380rpx; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.playbt{
+  height: 80rpx;
+  width: 80rpx;
+  display: flex;
+  align-items: center;
+}
+.paly_right{
+  height: 80rpx;
+  width: 200rpx;
+  border-radius: 60rpx;
+  background-color: rgb(252,58,59);
+  font-size: 25rpx;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+
+
+
+/* components/playlist/playlist.wxss */
+.play_list_items{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20rpx 0rpx;
+  /* background: url() */
+}
+.play_list_items>text{
+  width: 20vw;
+  text-align: center;
+}
+.palylist-middle-part{
+  width: 60vw;
+}
+.video_btgrop{
+  width: 20vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.headerselect{
+  display: flex;
+  flex-direction: column;
+  padding: 30rpx;
+  border-bottom: 1px solid lightgray;
+}
+.upSelection{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.vipBox{
+  border: 1px solid rgb(252,58,59);
+  border-radius: 15rpx;
+  padding: 5rpx;
+  font-size: 25rpx;
+  height: 40rpx;
+  width: 20vw;
+  text-align: center;
+}
+.vipAdv{
+   margin-top: 20rpx;
+}
+
+
+

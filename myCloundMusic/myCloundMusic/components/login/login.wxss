@@ -1,0 +1,51 @@
+
+/* components/login/login.wxss */
+.loginBox{
+  height: 100vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+.logo-outside{
+  margin-top: 270rpx;
+  height: 150rpx;
+  width: 150rpx;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logos{
+  height: 100rpx;
+  width: 100rpx;
+}
+.login-box{
+  
+  height: 400rpx;
+  width: 80vw;
+  margin-bottom: 30rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.login-bt{
+  width: 80vw !important;
+  height: 20rpx;
+  min-height: 20rpx;
+  max-width:100vw;
+}
+.site_logo{
+  width: 80vw;
+  display: flex;
+  justify-content: space-around;
+}
+.site_logo>image{
+  width: 80rpx;
+  height: 80rpx;
+}

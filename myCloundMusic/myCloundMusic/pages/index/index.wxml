@@ -1,0 +1,125 @@
+<!-- index.wxml -->
+<view class="container">
+  <view>
+    <swiper indicator-dots="{{indicatorDots}}"
+        autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block wx:for="{{background}}" wx:key="*this">
+          <swiper-item>
+            <view class="swiper-item {{item}}">
+              <image class="swiper_img" src="{{item.imageUrl}}"></image>
+            </view>
+          </swiper-item>
+        </block>
+      </swiper>
+  </view>
+  <view class="entress">
+    <view class="entress_item">
+      <view class="imgsss">
+        <image src="../../images/电台.png"></image>
+      </view>
+      <text>私人FM</text>
+    </view>
+    <view class="entress_item">
+      <view class="imgsss">
+        <image src="../../images/dt.png"></image>
+      </view>
+      <text>电台</text>
+    </view>
+    <view class="entress_item">
+      <view class="imgsss">
+        <image src="../../images/歌单.png"></image>
+      </view>
+      <text>歌单</text>
+    </view>
+    <view class="entress_item">
+      <view class="imgsss">
+        <image src="../../images/收藏心.png"></image>
+      </view>
+      <text>收藏</text>
+    </view>
+    <view class="entress_item">
+      <view class="imgsss">
+        <image src="../../images/排行2.png"></image>
+      </view>
+      <text>排行</text>
+    </view>
+  </view>
+  <view class="title_sugg">
+    <text class="squares ">推荐歌单</text>
+    <text class="squares_list">歌单广场</text>
+  </view>
+  <view class="musicList_box">
+    <view  
+    wx:for="{{suggestList}}" 
+    wx:key="index"
+    data-index="{{item.id}}"   
+    class="music_item" 
+    bindtap="gotoListDetail"
+    >
+      <view class="list_pic">
+        <image src="{{item.picUrl}}"></image>
+      </view>
+      <view class="list_middle">
+        <text class="list_name">{{item.name}}</text>
+        <text class="sugg_tex">热门推荐</text>
+      </view>
+      <view class="list_bottom">
+        <text class="bot_text">播放:{{item.playCount}}</text>
+        <text  class="bot_text">歌曲数:{{item.trackCount}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="title_sugg">
+    <text class="squares">每日推荐歌单</text>
+    <text class="squares_list">精品歌单</text>
+  </view>
+  <view class="musicList_box">
+    <view  
+    wx:for="{{everyDayMusic}}" 
+   
+    wx:key="index"  
+    class="music_item"
+    >
+      <view class="list_pic">
+        <image src="{{item.picUrl}}"></image>
+      </view>
+      <view class="list_middle">
+        <text class="list_name">{{item.name}}</text>
+        <text class="sugg_tex">热门推荐</text>
+      </view>
+      <view class="list_bottom">
+        <text class="bot_text">播放:{{item.playCount}}</text>
+        <text  class="bot_text">歌曲数:{{item.trackCount}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="title_sugg">
+    <text class="squares">每日推荐歌曲</text>
+    <text class="squares_list">精品歌单</text>
+  </view>
+  <view class="suggest_song_box">
+    <view 
+    class="song_item"
+    bindtap="playfunc"
+    wx:for="{{everyDaySong}}" 
+    wx:key="index"
+    data-index="{{item}}"
+    >
+      <view class="songitem_left">
+        <image src="{{item.album.picUrl}}"></image>
+      </view>
+      <view class="songitem_right">
+        <text class="songnames">{{item.name}}</text>
+        <text class="singers">演唱:{{item.artists[0].name}}</text>
+        <text class="albums">专辑:《{{item.name}}》</text>
+      </view>
+    </view>
+  
+  </view>
+
+  <view class="cdMachine_box" >
+    <cdmechine  ></cdmechine>
+  </view>
+
+  
+</view>

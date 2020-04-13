@@ -1,0 +1,72 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/musiclist/musiclist",
+    "pages/user/user",
+    "pages/search/search",
+    "pages/logins/logins",
+    "pages/listdetail/listdetail",
+    "pages/playing/playing"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "usingComponents": {
+    "van-button": "/miniprogram_npm/vant-weapp/button/index",
+    "van-collapse": "/miniprogram_npm/vant-weapp/collapse/index",
+    "van-collapse-item": "/miniprogram_npm/vant-weapp/collapse-item/index",
+    "van-search": "/miniprogram_npm/vant-weapp/search/index",
+    "van-toast": "/miniprogram_npm/vant-weapp/toast/index",
+    "van-tag": "/miniprogram_npm/vant-weapp/tag/index",
+    "van-slider":"/miniprogram_npm/vant-weapp/slider/index",
+    "cdmechine":"components/cdmechine/cdmechine",
+    "van-cell":"/miniprogram_npm/vant-weapp/cell/index",
+    "van-popup": "/miniprogram_npm/vant-weapp/popup/index",
+    "van-checkbox": "/miniprogram_npm/vant-weapp/checkbox/index",
+    "van-checkbox-group": "/miniprogram_npm/vant-weapp/checkbox-group/index"
+   
+    
+  },
+  "requiredBackgroundModes": [
+    "audio",
+    "location"
+  ],
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "##666666",
+    "selectedColor": "#000000",
+    "backgroundColor": "#fff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "推荐",
+        "iconPath": "images/收藏.png",
+        "selectedIconPath": "images/收藏-s.png"
+      },
+      {
+        "pagePath": "pages/musiclist/musiclist",
+        "text": "歌单",
+        "iconPath": "images/音乐.png",
+        "selectedIconPath": "images/音乐-s.png"
+      },
+      {
+        "pagePath": "pages/search/search",
+        "text": "搜索",
+        "iconPath": "images/搜索.png",
+        "selectedIconPath": "images/搜索-s.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "images/我的.png",
+        "selectedIconPath": "images/我的-s.png"
+      }
+    ]
+  }
+}

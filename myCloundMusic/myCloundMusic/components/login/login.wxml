@@ -1,0 +1,18 @@
+<!--components/login/login.wxml-->
+<view class="loginBox">
+  <view class="logo-outside">
+    <image class="logos" src="../../images/wy.png"></image>
+ </view>
+  
+  <view class="login-box">
+     <button class="login-bt" bindtap="gotologin">手机号登录</button>
+    <button class="login-bt">立即体验</button>
+    <view class="site_logo">
+      <image src="../../images/微信.png"></image>
+      <image src="../../images/QQ.png"></image>
+      <image src="../../images/新浪微博.png"></image>
+      <image src="../../images/腾讯.png"></image>
+    </view>
+  </view>
+
+</view>

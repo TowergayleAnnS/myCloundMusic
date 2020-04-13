@@ -1,0 +1,21 @@
+<!--components/playlist/playlist.wxml-->
+<view class="play_list_container">
+  <view class="play_list_items" 
+  wx:for="{{arr[tracks]}}" 
+  wx:key="*this"
+  bindtap="playMusicDlistSong"
+  data-songitem="{{item}}"
+  data-index='{{index}}'
+    >
+    <text>{{index+1}}</text>
+    <view class="palylist-middle-part">
+      <text style="font-size:31rpx;overflow:hidden;">{{item.name}}</text>
+      <view><van-tag  size="20rpx" plain>vip</van-tag></view>
+    </view>
+    <view class="video_btgrop">
+      <image style="height:70rpx;width:70rpx;" src="../../images/视频v.png"></image>
+      <image style="height:70rpx;width:70rpx;" src="../../images/点点.png"></image>
+    </view>
+  </view>
+
+</view>

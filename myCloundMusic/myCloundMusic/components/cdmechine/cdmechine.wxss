@@ -1,0 +1,31 @@
+/* components/cdmechine/cdmechine.wxss */
+.cdMachine_box{
+  width: 150rpx;
+  height: 150rpx;
+  /* background-color: green; */
+  position: fixed;
+  bottom: 20rpx;
+  right: 15rpx;
+  border-radius: 50%;
+  animation: goRotate 5s infinite linear;
+  box-shadow: 0 0 20px black;
+  background-color: white;
+}
+.cdMachine_box>image{
+  border-radius: 50%;
+   width: 150rpx;
+  height: 150rpx;
+}
+.paused {
+     animation-play-state: paused !important;
+}
+
+@keyframes goRotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

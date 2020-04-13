@@ -1,0 +1,152 @@
+/* cd机  */
+.cdMachine_box{
+  width: 150rpx;
+  height: 150rpx;
+  /* background-color: green; */
+  position: fixed;
+  bottom: 20rpx;
+  right: 15rpx;
+  border-radius: 50%;
+}
+/**index.wxss**/
+.container{
+  /* position: relative; */
+  height: 100vh;
+  width: 100vw;
+}
+.swiper_img{
+  width: 100vw;
+  height: 150px;
+}
+.entress{
+  height: 20vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid lightgray;
+}
+.entress_item{
+  width: 20vw;
+  height: 20vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.entress_item text{
+  font-size: 25rpx;
+}
+.imgsss{
+  width: 15vw;
+  height: 15vw;
+  border-radius: 50%;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.imgsss>image{
+  width: 10vw;
+  height: 10vw;
+  border-radius: 50%;
+  background-color: black;
+}
+.title_sugg{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2vh 3vw;
+}
+.squares{
+  font-weight: 600;
+  font-size: 30rpx;
+}
+.squares_list{
+  font-weight: 600;
+  font-size: 20rpx;
+}
+.musicList_box{
+  display: flex;
+  /* justify-content: space-around; */
+  flex-wrap: wrap;
+}
+.music_item{
+  width: 30vw;
+  margin-left: 2.5vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+.list_pic{
+  width: 28vw;
+  height: 28vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.list_pic>image{
+  width: 26vw;
+  height: 26vw;
+  
+}
+.list_middle{
+  width: 26vw;
+  height: 80rpx;
+  display: flex;
+  flex-direction: column;
+}
+.sugg_tex{
+  font-size: 15rpx;
+  color: gray;
+}
+.list_name{
+  font-weight: 500;
+  font-size: 20rpx;
+}
+.list_bottom{
+  width: 26vw;
+  display: flex;
+  justify-content: space-between;
+}
+.bot_text{
+  font-size: 16rpx;
+  color: gray;
+}
+.suggest_song_box{
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  
+}
+.song_item{
+  margin-top: 10rpx;
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+}
+.songitem_left{
+  width: 20vw;
+  height: 20vw;
+}
+.songitem_left>image{
+  width: 20vw;
+  height: 20vw;
+}
+.songitem_right{
+  width: 70vw;
+  height: 20vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.songnames{
+  font-size: 30rpx;
+}
+.singers{
+  font-size: 25rpx;
+}
+.albums{
+  font-size: 26rpx;
+}

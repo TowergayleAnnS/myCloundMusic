@@ -1,0 +1,9 @@
+<!--components/hotsearch/hotsearch.wxml-->
+<view class="hotSearch">
+  <text class="hotwords" 
+  wx:for="{{hotarr}}" 
+  wx:key="*this" 
+  bindtap="playHotMucic"
+  data-hotitem="{{item}}"
+  >{{item.first}}</text>
+</view>

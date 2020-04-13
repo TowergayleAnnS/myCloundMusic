@@ -1,0 +1,151 @@
+<!--pages/playing/playing.wxml-->
+<view class="playing_container">
+  <view class="bgc-box" style="background-image:url({{musicInfo.pic}})">
+    <!-- <view class="bgUrl">
+        <image class="opciy" src="{{currentPlayData.blurPicUrl==null?'../../locatImage/beauty.jpg':currentPlayData.blurPicUrl}}"></image>
+        
+      </view> -->
+  </view>
+  <view class="playing_header1">
+    <view>
+      <text style="font-size:35rpx;">{{musicInfo.name}}</text>
+      <view>
+        <text style="margin-right:15rpx;color:white; font-size:25rpx;">{{musicInfo.artists}}</text>
+        <mp-icon icon="arrow" color="lightgray" size="{{10}}"></mp-icon>
+      </view>
+    </view>
+    <image style="height:75rpx;width:75rpx;" src="../../images/分享.png"></image>
+  </view>
+  <view class="player_middle_box" bindtap="showLyric">
+    <view class="player_middle_box1" wx:if="{{isCover}}">
+      <view  class=' cdCircle {{isPause?" paused":""}}'>
+        <view class="cdBackground">
+          <view>
+            <image src="{{musicInfo.pic}}" class=""></image>
+          </view>
+        </view>
+      </view>
+      <!-- wx:if="{{!isPause}}" -->
+
+      <!-- <view wx:else class="rorate ">
+        <view class="cdBackground">
+          <view>
+            <image src="{{currentPlayData.picUrl}}" class=""></image>
+          </view>
+        </view>
+      </view> -->
+
+
+
+      <view class="function_box">
+        <!--  -->
+        <view class="fun_box_item" catchtap="collectTap">
+          <image src="{{isCollect==true?'../../images/红心.png':'../../images/心白.png'}}"></image>
+          <text>{{listH_Data.commentCount}}</text>
+        </view>
+        <view class="fun_box_item" catchtap="downTap">
+          <image src="../../images/下载12.png"></image>
+
+        </view>
+        <view class="fun_box_item">
+          <image src="../../images/铃铛白.png"></image>
+          <text>{{listH_Data.commentCount}}</text>
+        </view>
+        <view class="fun_box_item">
+          <image src="../../images/评论白.png"></image>
+          <text>{{listH_Data.commentCount}}</text>
+        </view>
+        <view class="fun_box_item">
+          <image src="../../images/菜单1.png"></image>
+        </view>
+      </view>
+    </view>
+    <!-- <view class="player_middle_box2" wx:else>
+      <view 
+      wx:for="{{lyricInfo}}"
+      wx:key="*this"
+      class="{{index==lyricLine?'red':''}}" 
+       >{{item.content?item.content:'-'}}</view>
+    </view> -->
+    <scroll-view class="player_middle_box2"
+     wx:else 
+     scroll-y="true" 
+     style="text-align:center"  
+     scroll-into-view="line{{lyricLine-10}}" >
+      <view 
+      wx:for="{{lyricInfo}}" 
+      wx:key="*this"
+      id="line{{index}}" 
+      enable-flex
+      class="{{index==lyricLine?'red':''}}" 
+      scroll-with-animation="{{true}}"
+      style="transition: all 1.2s linear"
+       >{{item.content?item.content:'-'}}</view>
+    </scroll-view>
+
+  </view>
+  <!-- <view class="lyric-box {{songInfoType=='lyric'?'show':'hide'}}">
+     <view wx:if="{{lyricArr.length==0}}">纯音乐，暂无歌词</view>
+     <scroll-view wx:else scroll-y="{{true}}" scroll-with-animation="{{true}}" scroll-into-view="line{{lyricLine-3}}">
+      <view class="lyric-line {{index==lyricLine?'lyric-line-active':''}}" wx:for="{{lyricArr}}" wx:key="{{index}}" id="line{{index}}">{{item.content||"-"}}</view>
+     </scroll-view>
+    </view> -->
+
+
+
+  <view class="process">
+    <view class="process_count">
+      <text>{{secondToMinute(currentTime)}}</text>
+    </view>
+
+    <view class="process_line">
+      <view class="body-view">
+        <slider max="{{duration}}" value="{{currentTime}}"  bindchange="sliderchange"/>
+      </view>
+
+    </view>
+    <view class="process_count">
+      <text class="">{{secondToMinute(duration)}}</text>
+
+    </view>
+  </view>
+  <view class="playModule">
+
+    <!-- 播放模式选择>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+    <view class="playItem">
+    <image  bindtap="changePlayMode"  src="{{playModeArr[currentImageIndex].image}}"></image>
+    
+      <!-- <image src='{{playMode=="loop"?" play-mode-icon-high":""}}'></image> -->
+    </view>
+
+
+    <view class="playItem" bindtap='prevBtnTapped'>
+      <image src="../../images/上一首.png"></image>
+    </view>
+    <view class="playItem3">
+      <image
+       wx:if="{{isPause}}" 
+       src="{{pause}}" 
+       bindtap="playbtn"
+       
+       ></image>
+      <image 
+      wx:else 
+      src=" {{play}}" 
+      bindtap="pausebtn"
+      
+      ></image>
+      <!-- ../../images/播放.png -->
+    </view>
+    <view class="playItem" bindtap='nextBtnTapped' >
+      <image src="../../images/下一首.png"></image>
+    </view>
+    <view class="playItem5">
+      <image src="../../images/列表.png"></image>
+    </view>
+  </view>
+
+
+</view>
+
+<wxs src="../../script/second.wxs" module="secondToMinute" ></wxs>

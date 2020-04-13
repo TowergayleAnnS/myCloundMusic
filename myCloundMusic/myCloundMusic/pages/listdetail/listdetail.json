@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "mp-icon": "../../components/icon/icon",
+    "playlist": "../../components/playlist/playlist"
+  }
+}

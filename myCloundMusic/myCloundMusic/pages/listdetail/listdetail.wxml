@@ -1,0 +1,151 @@
+<!--pages/listdetail/listdetail.wxml-->
+<view class="listDetailpage">
+  <view class="pageToppart">
+      <view class="bgUrl">
+        <image class="opciy" src="{{listH_Data.backgroundCoverUrl==null?'../../locatImage/beauty.jpg':listH_Data.backgroundCoverUrl}}"></image>
+        <!-- <image src="{{listH_Data.backgroundCoverUrl}}"></image> -->
+
+      </view>
+    <view class="li_detail_header">
+        <view class="header_t">
+          <text class="musicMenu">歌单</text>
+          <text class="editSuggest">编辑推荐:祝你2020一切顺利</text>
+        </view>
+        <view>
+          <mp-icon icon="search" color="white" size="{{25}}"></mp-icon>
+          <mp-icon icon="more" color="white" size="{{25}}"></mp-icon>
+        </view>
+     </view>
+
+     <view class="menuMessage_box">
+        <view class="menu_image">
+          <image src="{{musicList.coverImgUrl}}"></image>
+        </view>
+        <view class="munu_text_descrip">
+            <view>
+              <text class="desr_title">{{musicList.name}}</text>
+            </view>
+            <view class="logo_title_arrow">
+              <image class="little_logo" src="../../locatImage/logo.png"></image>
+              <text>网易云音乐</text>
+              <mp-icon icon="arrow" color="lightgray" size="{{10}}"></mp-icon>
+            </view>
+            <view class="words_arrow">
+              <view>
+                <text>随机播放一首歌</text>
+                <text>让他成为你的2020主题曲...</text>
+              </view>
+              <mp-icon icon="arrow" color="lightgray" size="{{10}}"></mp-icon>
+            </view>
+        </view>
+     </view>
+
+     <view class="function_box">
+          <view class="fun_box_item">
+            <image src="../../images/评论.png" ></image>
+            <text>{{musicList.commentCount}}</text>
+          </view>
+          <view class="fun_box_item">
+            <image src="../../images/分享.png" ></image>
+            <text>{{musicList.commentCount}}</text>
+          </view>
+          <view class="fun_box_item">
+            <image src="../../images/下载.png" ></image>
+            <text>下载</text>
+          </view>
+          <view class="fun_box_item">
+            <image src="../../images/选择.png" ></image>
+            <text>多选</text>
+          </view>
+     </view>
+  </view>
+  <view class="pageDownpart">
+    <view class="vips_box">
+      <view class="vip_box_left">
+        <view class="vip_images">
+          <image src="../../images/vip.png"></image>
+        </view>
+        <view>
+          <text>开通VIP畅听无阻</text>
+        </view>
+      </view>
+      <view class="vip_box_right">
+        <text>VIP低至6折</text>
+        <mp-icon icon="arrow" color="white" size="{{10}}"></mp-icon>
+      </view>
+    </view>
+    <view class="down_insider">
+        <view class="paly_boxes">
+          <view class="paly_left">
+            <view class="playbt">
+              <mp-icon  icon="play2"  size="{{25}}"></mp-icon>
+            </view>
+            <view>
+              <text style="font-size:32rpx;" >播放全部 <text style="font-size:25rpx;color:gray">(共30首)</text> </text>
+            </view>
+          </view>
+          <view class="paly_right" bindtap="addMusicListToMyCollection" >
+            <mp-icon  icon="add" color="white"  size="{{20}}"></mp-icon>
+            <text>收藏(54512)</text>
+          </view>
+        </view>
+        <!-- <playlist arr="{{musicList}}"  ></playlist> -->
+        <view class="play_list_container">
+  <view class="play_list_items" 
+  wx:for="{{musicList.tracks}}" 
+  wx:key="*this"
+  bindtap="playMusicDlistSong"
+  data-songitem="{{item}}"
+  data-index='{{index}}'
+    >
+    <text>{{index+1}}</text>
+    <view class="palylist-middle-part">
+      <text style="font-size:31rpx;overflow:hidden;">{{item.name}}</text>
+      <view><van-tag  size="20rpx" plain>vip</van-tag></view>
+    </view>
+    <view class="video_btgrop">
+      <image style="height:70rpx;width:70rpx;" src="../../images/视频v.png"></image>
+      <image data-items="{{item}}" catchtap="showMoreSelect" style="height:70rpx;width:70rpx;" src="../../images/点点.png"></image>
+      <van-popup
+        show="{{ show1 }}"
+        round
+        position="bottom"
+        custom-style="height: 80vh"
+        bind:close="onClose1"
+        overlay-style="background-color: rgba(1,1,1,0.5);"
+      >
+        <view class="moreSelection">
+          <view class="headerselect">
+            <view class="upSelection">
+              <image style="height:120rpx;width:120rpx;" src="{{musicList.coverImgUrl}}"></image>
+              <view class="music_namebox">
+                <view>歌曲:{{musicListsongsObj.name}}</view>
+                <view>{{musicListsongsObj.ar[0].name}}</view>
+              </view>
+              <view class="vipBox">
+                VIP首开5元
+              </view>
+            </view>
+            <view class="vipAdv">开通vip畅想千万曲库下载特权</view>
+          </view>
+           
+          <view class="downselect">
+            
+          
+          </view>
+
+        
+        </view>
+      </van-popup>
+
+    </view>
+  </view>
+
+</view>
+    </view>
+  
+  </view>
+    
+
+</view>
+<cdmechine></cdmechine>
